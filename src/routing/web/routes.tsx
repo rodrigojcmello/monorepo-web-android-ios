@@ -3,6 +3,7 @@ import Main from '../../screens/Main';
 import ReactNativeWeb from '../../screens/ReactNativeWeb';
 import Primitive from '../../screens/Primitive';
 import Animation from '../../screens/Animation';
+import Github from '../../screens/Github';
 
 const routes: RouteConfig[] = [
   {
@@ -20,6 +21,10 @@ const routes: RouteConfig[] = [
   {
     component: Animation,
     path: '/animation'
+  },
+  {
+    component: Github,
+    path: '/github'
   }
   // {
   //   component: Screen1,
