@@ -1,0 +1,39 @@
+@for $i from 0 through 10 {
+  .bgContrast#{$i} {
+    background-color: var(--con-#{$i});
+  }
+
+  .colorContrast#{$i} {
+    color: var(--con-#{$i});
+  }
+
+  .borderContrast#{$i} {
+    border-color: var(--con-#{$i});
+  }
+}
+
+@for $i from 1 through 9 {
+  .bgPrimary#{$i} {
+    background-color: var(--pri-#{$i});
+  }
+
+  .bgSecondary#{$i} {
+    background-color: var(--sec-#{$i});
+  }
+
+  .bgSuccess#{$i} {
+    background-color: var(--suc-#{$i});
+  }
+
+  .bgWarning#{$i} {
+    background-color: var(--war-#{$i});
+  }
+
+  .bgDanger#{$i} {
+    background-color: var(--dan-#{$i});
+  }
+
+  .colorPrimary#{$i} {
+    background-color: var(--pri-#{$i});
+  }
+}

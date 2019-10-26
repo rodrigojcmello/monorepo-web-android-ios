@@ -1,0 +1,21 @@
+@for $i from 0 through 10 {
+  .m#{$i} {
+    margin: var(--s-#{$i});
+  }
+
+  .mt#{$i} {
+    margin-top: var(--s-#{$i});
+  }
+
+  .mb#{$i} {
+    margin-bottom: var(--s-#{$i});
+  }
+
+  .mr#{$i} {
+    margin-right: var(--s-#{$i});
+  }
+
+  .ml#{$i} {
+    margin-left: var(--s-#{$i});
+  }
+}

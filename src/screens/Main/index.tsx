@@ -3,11 +3,7 @@
 import React from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import { makeStyles, Theme, useTheme } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import { Typography, Box, Tab, Tabs, AppBar, Toolbar } from '@material-ui/core';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -43,7 +39,10 @@ function a11yProps(index: any): any {
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     backgroundColor: theme.palette.background.paper,
-    width: 500
+    width: 600
+  },
+  tabs: {
+    backgroundColor: theme.palette.primary.main
   }
 }));
 
@@ -64,36 +63,53 @@ export default function Main(): JSX.Element {
   };
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static" color="default">
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          indicatorColor="primary"
-          textColor="primary"
-          variant="fullWidth"
-          aria-label="full width tabs example"
+    <div>
+      <div className={classes.root}>
+        <Box boxShadow={4}>
+          <AppBar position="static">
+            <Toolbar>
+              <Typography variant="h6">WhatsApp</Typography>
+            </Toolbar>
+          </AppBar>
+          <AppBar position="static" elevation={0} color="default">
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              className={classes.tabs}
+              textColor="secondary"
+              variant="fullWidth"
+              aria-label="full width tabs example"
+            >
+              <Tab label="Item One" {...a11yProps(0)} />
+              <Tab label="Item Two" {...a11yProps(1)} />
+              <Tab label="Item Three" {...a11yProps(2)} />
+              <Tab label="Item Three" {...a11yProps(3)} />
+              <Tab label="Item Three" {...a11yProps(4)} />
+            </Tabs>
+          </AppBar>
+        </Box>
+        <SwipeableViews
+          axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+          index={value}
+          onChangeIndex={handleChangeIndex}
         >
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
-        </Tabs>
-      </AppBar>
-      <SwipeableViews
-        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-        index={value}
-        onChangeIndex={handleChangeIndex}
-      >
-        <TabPanel value={value} index={0} dir={theme.direction}>
-          Item One
-        </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction}>
-          Item Two
-        </TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction}>
-          Item Three
-        </TabPanel>
-      </SwipeableViews>
+          <TabPanel value={value} index={0} dir={theme.direction}>
+            Item One
+          </TabPanel>
+          <TabPanel value={value} index={1} dir={theme.direction}>
+            Item Two
+          </TabPanel>
+          <TabPanel value={value} index={2} dir={theme.direction}>
+            Item Three
+          </TabPanel>
+          <TabPanel value={value} index={3} dir={theme.direction}>
+            Item Three
+          </TabPanel>
+          <TabPanel value={value} index={4} dir={theme.direction}>
+            Item Three
+          </TabPanel>
+        </SwipeableViews>
+      </div>
     </div>
   );
 }
