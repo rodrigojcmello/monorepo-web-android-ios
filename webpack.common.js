@@ -7,9 +7,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', '.json', '.web.js', '.web.ts'],
     alias: {
-      'react-native$': 'react-native-web'
+      'react-native$': 'react-native-web',
+      'react-content-loader/native$': 'react-content-loader'
     }
   }
 };

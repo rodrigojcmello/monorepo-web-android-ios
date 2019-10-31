@@ -1,6 +1,7 @@
 import { RouteConfig } from 'react-router-config';
 import Main from '../../screens/Main';
 import ReactNativeWeb from '../../screens/ReactNativeWeb';
+import ReactNativeWebPlugin from '../../screens/ReactNativeWebPlugin';
 import Primitive from '../../screens/Primitive';
 import Animation from '../../screens/Animation';
 import Github from '../../screens/Github';
@@ -9,6 +10,10 @@ const routes: RouteConfig[] = [
   {
     component: Main,
     path: '/material-design'
+  },
+  {
+    component: ReactNativeWebPlugin,
+    path: '/react-native-web-plugin'
   },
   {
     component: ReactNativeWeb,
