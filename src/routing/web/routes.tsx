@@ -3,8 +3,10 @@ import Main from '../../screens/Main';
 import ReactNativeWeb from '../../screens/ReactNativeWeb';
 import ReactNativeWebPlugin from '../../screens/ReactNativeWebPlugin';
 import Primitive from '../../screens/Primitive';
+import Primitive2 from '../../screens/Primitive2';
 import Animation from '../../screens/Animation';
 import Github from '../../screens/Github';
+import Login from '../../screens/Login';
 
 const routes: RouteConfig[] = [
   {
@@ -16,12 +18,20 @@ const routes: RouteConfig[] = [
     path: '/react-native-web-plugin'
   },
   {
+    component: Login,
+    path: '/login'
+  },
+  {
     component: ReactNativeWeb,
     path: '/react-native-web'
   },
   {
     component: Primitive,
     path: '/primitive'
+  },
+  {
+    component: Primitive2,
+    path: '/primitive2'
   },
   {
     component: Animation,

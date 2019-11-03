@@ -4,11 +4,11 @@
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "resolveJsonModule": true,
     "strict": true,
     "target": "esnext",
-    "module": "commonjs",
+    "module": "esnext",
     "moduleResolution": "node"
   },
   "include": ["src/**/*"],

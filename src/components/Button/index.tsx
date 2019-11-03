@@ -1,12 +1,12 @@
+/* eslint-disable react/button-has-type */
 import React from 'react';
-import ButtonUI from '@material-ui/core/Button';
 import { ButtonProps } from './types';
 
-function Button({ text }: ButtonProps): JSX.Element {
+function Button({ text, type, onPress }: ButtonProps): JSX.Element {
   return (
-    <ButtonUI variant="contained" color="primary">
+    <button type={type || 'submit'} onClick={onPress}>
       {text}
-    </ButtonUI>
+    </button>
   );
 }
 

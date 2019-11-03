@@ -9,8 +9,9 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.json', '.web.js', '.web.ts'],
     alias: {
-      'react-native$': 'react-native-web',
-      'react-content-loader/native$': 'react-content-loader'
+      'react-content-loader/native$': 'react-content-loader-wrapper',
+      'react-content-loader-wrapper': 'react-content-loader',
+      'react-native$': 'react-native-web'
     }
   }
 };
