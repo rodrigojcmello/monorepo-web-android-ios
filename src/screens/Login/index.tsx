@@ -1,4 +1,5 @@
 import React, { FormEvent, useCallback, useState } from 'react';
+import { NativeSyntheticEvent, NativeTouchEvent } from 'react-native';
 import Button from '../../components/Button';
 import Form from '../../components/Form';
 import TextInput from '../../components/TextInput';
@@ -10,7 +11,9 @@ function Login(): JSX.Element {
 
   const handleSubmit = useCallback(
     (
-      event: FormEvent<HTMLFormElement | HTMLButtonElement> | undefined
+      event:
+        | FormEvent<HTMLFormElement | HTMLButtonElement>
+        | NativeSyntheticEvent<NativeTouchEvent>
     ): void => {
       if (event) {
         event.preventDefault();

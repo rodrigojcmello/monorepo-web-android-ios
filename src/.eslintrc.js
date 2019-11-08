@@ -23,7 +23,8 @@ module.exports = {
     "max-lines": 1,
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "prettier/prettier": [1, { singleQuote: true }],
-    "react/jsx-props-no-spreading": 0
+    "react/jsx-props-no-spreading": 0,
+    'no-console': 0
   },
   settings: {
     react: {

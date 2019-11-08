@@ -7,11 +7,16 @@ import Primitive2 from '../../screens/Primitive2';
 import Animation from '../../screens/Animation';
 import Github from '../../screens/Github';
 import Login from '../../screens/Login';
+import Camera from '../../screens/Camera';
 
 const routes: RouteConfig[] = [
   {
     component: Main,
     path: '/material-design'
+  },
+  {
+    component: Camera,
+    path: '/camera'
   },
   {
     component: ReactNativeWebPlugin,
