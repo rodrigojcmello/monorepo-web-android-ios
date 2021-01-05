@@ -18,7 +18,7 @@
     "@emotion/styled": "^10.0.22",
     "@material-ui/core": "^4.5.1",
     "@material-ui/styles": "^4.5.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "expo-camera": "^7.0.0",
     "expo-permissions": "^7.0.0",
     "history": "^4.10.1",
